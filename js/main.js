@@ -47,7 +47,6 @@ const dataBase = [
         ],
         price: "Rp 2.799.000",
     },
-    
     {
         id: 4,
         nameProduct: "xiaomi",
@@ -84,7 +83,6 @@ const dataBase = [
         ],
         price: "Rp 1.799.000",
     },
-
     {
         id: 6,
         nameProduct: "xiaomi",
@@ -121,7 +119,6 @@ const dataBase = [
         ],
         price: "Rp 4.899.000",
     },
- 
     {
         id: 9,
         nameProduct: "poco",
@@ -134,8 +131,6 @@ const dataBase = [
         ],
         price: "Rp 2.799.000",
     },
-
-
     {
         id: 10,
         nameProduct: "poco",
@@ -196,6 +191,7 @@ const dataBase = [
         ],
         price: "Rp 3.799.000",
     },
+    //template menambah product
     // {
     //     id: 11,
     //     nameProduct: "",
@@ -210,7 +206,7 @@ const dataBase = [
     // },
 ];
 
-function renderProducts(data) {
+function Products(data) {
     let container = document.querySelector('.container');
     data.forEach((product) => {
         // col-1
@@ -285,4 +281,4 @@ function renderProducts(data) {
     });
 }
 
-renderProducts(dataBase);
+Products(dataBase);
