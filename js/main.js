@@ -206,9 +206,9 @@ const dataBase = [
     // },
 ];
 
-function Products(data) {
+function Products(data) {    
     let container = document.querySelector('.container');
-    data.forEach((product) => {
+    data.map((product) => {
         // col-1
         let col_1 = document.createElement('div');
         col_1.classList.add('col-1');
@@ -223,7 +223,7 @@ function Products(data) {
         let figcaption = document.createElement('figcaption');
 
         // deskripsi figcaption
-        product.description.forEach(desc => {
+        product.description.map(desc => {
             let p = document.createElement('p');
             p.textContent = desc;
             figcaption.appendChild(p);
@@ -237,6 +237,7 @@ function Products(data) {
         //button
         let buy = document.createElement('button');
         buy.textContent = ("buy now");
+        buy.classList.add('btn1');
         let like = document.createElement('button');
         like.textContent = ("like");
         let coment = document.createElement('button');
@@ -271,14 +272,13 @@ function Products(data) {
         container.appendChild(col_1);
         container.appendChild(col_2);
 
-        // // style dom
-        buy.style.backgroundColor='#f00';
-        buy.style.color='#fff';
-        like.style.backgroundColor='#f00';
-        like.style.color='#fff';
-        coment.style.backgroundColor='#f00';
-        coment.style.color='#fff';
+        // // style dom untuk tombol
+        let tombol = document.getElementsByTagName('button');
+        for (let index = 0; index < tombol.length; index++) {
+            const element = tombol[index];
+            element.style.backgroundColor='#f00';
+            element.style.color='#fff';
+        }
     });
 }
-
 Products(dataBase);
